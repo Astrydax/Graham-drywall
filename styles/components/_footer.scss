@@ -1,0 +1,50 @@
+.footer {
+  background-color: $company-orange;
+  padding: $l-size 20px 0 20px;
+  box-sizing: border-box;
+  .grid {
+    grid-gap: 20px;
+    justify-content: space-around;
+  }
+}
+
+.footer-badge, .footer-address {
+  margin: 0 auto;
+}
+
+.footer-badge {
+  width: 150px;
+  filter: $generic-drop-shadow;
+}
+
+.footer-address {
+  $spacing: 10px;
+  p {
+    margin: 0;
+  }
+  h5 {
+    border-bottom: 3px solid $company-blue;
+    padding-bottom: $spacing;
+    margin: 0 0 $spacing 0;
+  }
+  p, h5 {
+    color: white;
+    padding-left: $spacing;
+  }
+  min-width: 250px;
+  font-style: normal;
+  padding: 20px;
+  background-color: $dark-blue;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-radius: 3px;
+}
+
+.footer-attr {
+  text-align:center;
+  padding-bottom: 15px;
+  a {
+    display: block;
+    color: white;
+  }
+  margin: $l-size 0 0 0;
+}

@@ -1,0 +1,73 @@
+.contact-form {
+  // max-width: 450px;
+  padding: 25px !important;
+  // margin: 20px;
+  background-color: white;
+  // background-clip: padding-box;
+  // border: 10px solid $primary-color;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  h2 {
+    // color: white;
+    font-size: 33px;
+    text-align: center;
+    border-bottom: 4px solid $primary-color;
+    padding-bottom: $m-size;
+    margin: 0;
+  }
+
+  p {
+    // color: white;
+    // font-size: 14px;
+    // line-height: 1.7;
+    text-align: left;
+    // margin: $m-size 0 $l-size 0;
+  }
+}
+
+.contact-fields {
+  $input-color: white;
+
+  display: flex;
+  flex-direction: column;
+  
+  // materialize overwrites
+  .input-field {
+    margin-bottom: 4px;
+  }
+
+  .input-field input + label {
+    // pre-input color
+    // color: $input-color;
+  }
+
+  .input-field[data-error="true"] input + label {
+    color: $error-color;
+  }
+
+  .input-field input {
+    // border-bottom: 1px solid $secondary-color;
+    // color: $input-color;
+  }
+
+  input[data-error="true"] {
+
+  }
+}
+
+/* Error feedback for failed submit */
+.contact-error { margin: 0 !important; }
+
+/* Contact Form button */
+.contact-button {
+  // color: white;
+  // // font-size: $m-size;
+  // font-weight: bold;
+  // padding: 15px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  margin-top: $m-size;
+  color: $off-black;
+  // background: $company-blue;
+}

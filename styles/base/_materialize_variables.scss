@@ -1,0 +1,12 @@
+// color pallet ref: https://materializecss.com/color.html
+
+$primary-color: color("blue", "lighten-1") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: color("orange", "accent-2") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+
+$right-gradient: linear-gradient(to right, $primary-color, $secondary-color);

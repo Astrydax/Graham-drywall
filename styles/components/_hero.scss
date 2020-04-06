@@ -1,0 +1,78 @@
+/* The hero image */
+.hero-image, .hero-content {
+  min-height: calc(100vh - #{$navbar-height-mobile});
+  @media #{$medium-and-up} {
+    min-height: calc(100vh - #{$navbar-height});
+  }
+}
+
+.hero-image {
+  /* Makes section take at least the height of the viewport */
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-image: url('../../public/images/hero-patio.jpg');
+  position: relative;
+}
+
+/* Overlay of hero image */
+/* Contains hero contact form and messaging / company logo */
+.hero-content {
+  padding: 20px 0;
+  // margin: auto auto;
+  box-sizing: border-box;
+
+  /* Overlay gradient on hero image */
+  background-image: linear-gradient(to top, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5));
+
+  /* Centers content on X and Y in hero section */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Logo in hero section */
+.hero-logo {
+  width: 100%;
+  margin: 0 auto;
+
+  /* Slight drop shadow to make logo more legible */
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
+}
+
+/* Hero section messaging */
+.hero-cta {
+  // max-width: 600px;
+  p, h1 { color:white; }
+
+  /* Primary hero messaging */
+  h1 {  
+    /* Special word coloring */ 
+    span { color: $primary-color; }
+  }
+  padding: 0 !important;
+  /* Secondary hero messaging */
+  // p { font-size: 24px; }
+}
+
+/* Company phone number in hero section */
+.hero-phone {
+  color: white;
+  font-size: 28px;
+  padding: 10px 15px;
+  margin: 15px 0 20px 0;
+  background-color: $primary-color;
+  border-radius: 3px;
+  box-shadow: 0 4px 10px rgba(0,0,0, 0.65);
+
+  /* Makes element only be as wide as necessary */
+  display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  /* Clear padding from hero section when on smaller screens */
+  .hero-content { padding: 0; }
+}
