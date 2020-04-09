@@ -7,3 +7,13 @@
 .contact-us__container {
   background-color: red;
 }
+
+.contact-us__success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-us__error {
+  margin-bottom: 10px !important;
+}

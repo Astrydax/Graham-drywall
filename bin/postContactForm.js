@@ -1,5 +1,3 @@
-const url = 'http://localhost:3000';
-
 function postContactForm(data, successCallback, failCallback) {
   fetch('/api/contact', {
     method: 'POST',
