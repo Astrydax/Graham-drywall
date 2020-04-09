@@ -111,24 +111,27 @@ class Contact extends React.Component {
     return this.state[`${fieldName}Error`];
   }
 
-  handleSubmit = e => {
+  handleSubmit = ev => {
     // prevent page from refreshing on submit
-    e.preventDefault();
-    
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
     // Runs only if there are no errors
     if (!this.handleErrors()) {
-      const { name, phone, email, address, message } = this.state;
-      const failureMsg = 'Something went wrong. Please give us a call instead';
-      
-      // postContactForm will success or fail callback depending on whether
-      // the request resolves or errors out
-      const successCallback = res => {
-        const success = res.status == 200;
-        this.setState({ success, error: success ? '' : failureMsg });
+      const {name, phone, email, address, message} = this.state;
+      xhr.open(form.method, form.action);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          form.reset();
+          this.setState({status: "SUCCESS"});
+        } else {
+          this.setState({status: "ERROR"});
+        }
       };
-      const failCallback = () => this.setState({ success: false, error: failureMsg });
-  
-      postContactForm({ name, phone, email, address, message }, successCallback, failCallback);
+      xhr.send(data);
     }
   }
 
@@ -145,7 +148,7 @@ class Contact extends React.Component {
     };
 
     return (
-      <form className="contact-form col col s12 m12 l5 right z-depth-3" onSubmit={this.handleSubmit}>
+      <form className="contact-form col col s12 m12 l5 right z-depth-3" onSubmit={this.handleSubmit} action={"https://formspree.io/mgelkeeo"} method={"POST"}>
         <FormMessaging {...messaging} />
         {!success && (
           <div className="contact-fields">

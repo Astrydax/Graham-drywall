@@ -7,7 +7,7 @@ const Hero = () => (
     <div className="container row">
       <section className="hero-cta col s12 m12 l5 left">
         {/* <img className="hero-logo" src="./images/logo.png" alt="Dynamic Trades Logo"/> */}
-        <h1>Short and Sweet Splash Text With <span>Special Words</span></h1>
+        <h1>Graham Drywall <span>Established</span> in 1963</h1>
         <div className="section-header__border" style={{width: '100%', margin: '10px 0'}}/>
         <a className="hero-phone" href="tel:+1865-680-2295">865-680-2295</a>
       </section>

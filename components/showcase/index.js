@@ -20,7 +20,7 @@ const Showcase = () => (
     <div className="container">
       <SectionHeader
         title="SHOWCASE"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."  
+        description="Graham drywall contractors is one of the oldest drywall companies in East Tennessee. We were established in 1963 and we specialize in residential, commercial construction and remodels. Our company is based in Maryville, TN and has provide services in Blount, Sevier, Monroe, Knox, Loudon and Anderson county."
       />
       <div className="row section">
         <div className="col l5 s12 right">

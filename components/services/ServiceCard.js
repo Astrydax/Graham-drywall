@@ -1,7 +1,7 @@
 import Card from '../cards/card';
 
 const ServiceCard = ({ title, description, imgSrc }) => {
-  const img = { src: 'http://placehold.jp/1920x1080.png', alt: title };
+  const img = { src: imgSrc, alt: title };
   const url = title.toLowerCase().split(' ').join('_');
 
   return (
