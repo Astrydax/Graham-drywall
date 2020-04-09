@@ -1,16 +1,4 @@
 export default class Cards extends React.Component {
-  componentDidMount() {
-    // initialize masonry.js class when on the client side
-    if (typeof document !== 'undefined') {
-      var elem = document.querySelector('.cards');
-      var msnry = new Masonry( elem, {
-        // options
-        itemSelector: '.col',
-        // columnWidth: 200
-      });
-    }
-  }
-
   render() {
     const { Card, array } = this.props;
     return (

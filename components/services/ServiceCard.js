@@ -10,6 +10,7 @@ const ServiceCard = ({ title, description, imgSrc }) => {
       title={title}
       content={description}
       key={title}
+      className={'service-card'}
     />
   );
 };
