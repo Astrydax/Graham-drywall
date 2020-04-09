@@ -30,8 +30,7 @@ class Contact extends ContactTemplate {
   };
 
   render() {
-    const FieldNames = this.constructor.FieldNames;
-    const FieldOptions = this.constructor.FieldOptions;
+    const { FieldNames, FieldOptions } = this.constructor;
     const { success, error, inflight } = this.state;
   
     return (
