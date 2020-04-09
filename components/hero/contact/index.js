@@ -31,7 +31,7 @@ class Contact extends React.Component {
   }
 
   handleInputOnChange = e => {
-    if (M) M.updateTextFields();
+    e.target.classList.add('active');
     const {name, value} = e.target;
     this.setState({ [name]: value });
   }
@@ -120,19 +120,18 @@ class Contact extends React.Component {
     const xhr = new XMLHttpRequest();
     // Runs only if there are no errors
     if (!this.handleErrors()) {
-      const {name, phone, email, address, message} = this.state;
-      xhr.open(form.method, form.action);
-      xhr.setRequestHeader("Accept", "application/json");
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200) {
-          form.reset();
-          this.setState({status: "SUCCESS"});
-        } else {
-          this.setState({status: "ERROR"});
-        }
+      const {name, phone, email, message} = this.state;
+      const failureMsg = 'Something went wrong. Please give us a call instead';
+      
+      // postContactForm will success or fail callback depending on whether
+      // the request resolves or errors out
+      const successCallback = res => {
+        const success = res.status == 200;
+        this.setState({ success, error: success ? '' : failureMsg });
       };
-      xhr.send(data);
+      const failCallback = () => this.setState({ success: false, error: failureMsg });
+  
+      postContactForm({ name, phone, email, message }, successCallback, failCallback);
     }
   }
 
