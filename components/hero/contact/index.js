@@ -4,6 +4,7 @@ import PhoneValidator from 'phone';
 import FormInput from './FormInput';
 import FormMessaging from './FormMessaging';
 import postContactForm from '../../../bin/postContactForm';
+import M from '../../../bin/materializeLoader';
 
 class Contact extends React.Component {
   static get FieldNames() {
@@ -30,7 +31,7 @@ class Contact extends React.Component {
   }
 
   handleInputOnChange = e => {
-    // if (M) M.updateTextFields();
+    if (M) M.updateTextFields();
     const {name, value} = e.target;
     this.setState({ [name]: value });
   }

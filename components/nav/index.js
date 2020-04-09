@@ -16,6 +16,8 @@ class Nav extends Component {
       <NavBarLink title="Contact" href="#contact!" key={4} />,
     ];
 
+    const facebookURL = "https://www.facebook.com/Graham-Drywall-100539464946053";
+
     return (
       <Fragment>
         <div className="navbar-fixed">
@@ -32,6 +34,11 @@ class Nav extends Component {
               </a>
               <ul className="right hide-on-med-and-down">
                 {Links}
+                <li className="nav-facebook">
+                  <a href={facebookURL} target="__blank">
+                    <img src="images/facebook.png" alt="facebook" />
+                  </a>
+                </li>
               </ul>
             </div>
           </nav>
@@ -39,6 +46,11 @@ class Nav extends Component {
     
         <ul className="sidenav" id="mobile-nav" ref={ref => this.sidenav = ref}>
           {Links}
+          <li className="nav-side-facebook">
+            <a href={facebookURL} target="__blank">
+              <img src="images/facebook.png" alt="facebook" />
+            </a>
+          </li>
         </ul>
       </Fragment>
     );
