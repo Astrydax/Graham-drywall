@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": ">=10.15.0"
-  },
+  "engines" : { "node" : ">=12.0.0" },
   "scripts": {
     "dev": "next",
     "build": "next build && npm run export",
-    "start": "next start",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
     "export": "next export"
   },
   "author": "Anthony Ponzio",
