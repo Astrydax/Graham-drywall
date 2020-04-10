@@ -8,9 +8,8 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "export": "next export",
-    "start": "next start -p $PORT"
+    "start": "next start -p $PORT",
+    "prestart": "next build",
   },
   "author": "Anthony Ponzio",
   "license": "ISC",
