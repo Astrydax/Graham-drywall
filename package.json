@@ -8,7 +8,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "heroku-postbuild": "npm run build && npm run export",
+    "heroku-postbuild": "npm run build",
     "export": "next export"
   },
   "author": "Anthony Ponzio",
