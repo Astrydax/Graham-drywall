@@ -75,6 +75,4 @@ class Contact extends ContactTemplate {
   }
 }
 
-
-
 export default Contact;
