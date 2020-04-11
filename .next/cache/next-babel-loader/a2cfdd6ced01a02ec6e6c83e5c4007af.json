@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React, { Fragment } from 'react';\n\nconst FormMessaging = ({\n  title,\n  msg\n}) => __jsx(Fragment, null, __jsx(\"h2\", null, title), __jsx(\"p\", null, msg));\n\nexport default FormMessaging;","map":null,"metadata":{},"sourceType":"module"}

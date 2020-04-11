@@ -1,1 +1,0 @@
-{"ast":null,"code":"function postContactForm(data, successCallback, failCallback) {\n  fetch('/api/contact', {\n    method: 'POST',\n    body: JSON.stringify(data)\n  }).then(successCallback).catch(failCallback);\n}\n\nexport default postContactForm;","map":null,"metadata":{},"sourceType":"module"}

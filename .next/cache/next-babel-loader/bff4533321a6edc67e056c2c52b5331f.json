@@ -1,1 +1,0 @@
-{"ast":null,"code":"var M = true ? require(\"../styles/materialize/js/bin/materialize.min.js\") : null;\nexport default M;","map":null,"metadata":{},"sourceType":"module"}
