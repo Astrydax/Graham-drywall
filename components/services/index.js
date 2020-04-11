@@ -10,7 +10,7 @@ class Services extends React.Component {
   componentDidMount() {
     // initialize masonry.js class when on the client side
     if (typeof document !== 'undefined') {
-      runOnImageLoad('service-card img', () => {
+      runOnImageLoad('.service-card img', () => {
         var elem = document.querySelector('.cards');
         var msnry = new Masonry( elem, {
           // options
