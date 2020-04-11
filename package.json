@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "postinstall": "npm run build",
-    "start": "next start -p $PORT"
+    "start": "next start"
   },
   "author": "Anthony Ponzio",
   "license": "ISC",
